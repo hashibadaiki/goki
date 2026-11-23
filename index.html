@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#05070c" />
+    <meta name="description" content="ゴキブリになって深夜のキッチンを這い回る一人称ゲーム" />
+    <title>GOKI</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="view"></canvas>
+      <div id="hurt"></div>
+      <div id="hud" class="hud">
+        <div class="phase" id="phase">消灯中</div>
+        <div class="stats">
+          <div class="crumbs"><span class="k">パンくず</span><span class="v" id="crumbs">0 / 8</span></div>
+          <div class="bar hp"><i id="hp"></i></div>
+          <div class="bar stamina"><i id="stamina"></i></div>
+        </div>
+        <div class="eye" id="eye">
+          <span class="k">視線</span>
+          <div class="eye-bar"><i id="eyefill"></i></div>
+        </div>
+        <div class="guide" id="guide">
+          <div class="arrow" id="arrow"></div>
+          <span id="guide-text"></span>
+        </div>
+        <div class="toast" id="toast"></div>
+      </div>
+      <div id="touch" class="touch">
+        <div class="stick" id="stick"><i id="knob"></i></div>
+        <button class="tbtn jump" id="btn-jump" type="button">跳ぶ</button>
+        <button class="tbtn pause" id="btn-pause" type="button" aria-label="一時停止">II</button>
+      </div>
+      <div id="menu" class="menu on">
+        <div class="panel">
+          <h1 id="menu-title">GOKI</h1>
+          <p class="sub" id="menu-sub">深夜のキッチン。パンくずを集めて、冷蔵庫の下の巣へ帰れ。</p>
+          <div class="result" id="result"></div>
+          <button class="start" id="start" type="button">はじめる</button>
+          <div class="help">
+            <ul class="keys pc">
+              <li><b>WASD</b>移動</li>
+              <li><b>マウス</b>視点</li>
+              <li><b>Shift</b>走る</li>
+              <li><b>Space</b>跳ぶ（長押しで羽ばたき）</li>
+              <li><b>Esc</b>一時停止</li>
+            </ul>
+            <ul class="keys sp">
+              <li><b>左ドラッグ</b>移動（端まで倒すと走る）</li>
+              <li><b>右ドラッグ</b>視点</li>
+              <li><b>跳ぶ</b>長押しで羽ばたき</li>
+            </ul>
+            <p>壁も天井も歩ける。電気がついたら、人間の視線に入るな。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
