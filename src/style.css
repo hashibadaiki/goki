@@ -245,14 +245,14 @@ body {
   opacity: 1;
 }
 
-.touch {
+#touch {
   position: absolute;
   inset: 0;
   display: none;
   touch-action: none;
 }
 
-body.touch .touch.on {
+body.touch #touch.on {
   display: block;
 }
 
