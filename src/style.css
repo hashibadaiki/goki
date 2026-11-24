@@ -461,3 +461,21 @@ body.touch .keys.sp {
 body.touch .keys.pc {
   display: none;
 }
+
+#diag {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  max-height: 45vh;
+  margin: 0;
+  padding: 6px 8px calc(6px + var(--sab));
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: #9f9;
+  font: 10px/1.35 var(--mono);
+  white-space: pre-wrap;
+  word-break: break-all;
+  pointer-events: none;
+}
